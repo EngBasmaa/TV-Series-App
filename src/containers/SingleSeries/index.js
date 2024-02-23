@@ -16,11 +16,6 @@ class SingleSeries extends Component {
     const { show } = this.state;
     console.log(show);
 
-    // console.log(show.premiered);
-    // console.log(show.rating.average);
-    // console.log(show._embedded.episodes.length);
-    // console.log(show.image.medium);
-
     return (
       <div>
         {show === null && <Loader />}
