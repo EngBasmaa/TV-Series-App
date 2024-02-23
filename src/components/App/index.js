@@ -1,8 +1,8 @@
 import "./App.css";
 import React, { Component } from "react";
-import Intro from "../Intro";
-import "whatwg-fetch";
-import Series from "./../../containers/series/index";
+import Main from "../Main";
+import { BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from "react-dom";
 
 /*
 * To create our first functional component:
@@ -22,10 +22,15 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">TV Series List</h1>
         </header>
-        <Intro message="Here, you can find all most loved series" />
-        <Series />
+        <Main />
       </div>
     );
   }
 }
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("root")
+);
 export default App;

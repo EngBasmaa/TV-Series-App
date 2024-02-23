@@ -1,8 +1,11 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const SeriesListItem = ({ series }) => (
-  <li>{series.show.name}</li> // To get every single show name from our series (10 items)
+  <li>
+    <Link to={`/series/${series.show.id}`}>{series.show.name}</Link>
+  </li> // To get every single show name from our series (10 items)
 );
 
 const SeriesList = (props) => {
